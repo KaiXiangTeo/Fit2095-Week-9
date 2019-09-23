@@ -9,11 +9,11 @@ export class AppComponent {
   title:string = 'Week 9 Lab';
   bookTitle:string = "";
   bookdate:string = "";
-  // bookCount:number=0;
   booktype:Array<string> =["Hard Cover","Paper Back"];
   newbookType:string="";
   summary:string="";
-  bookArr=[]
+  deleteN:number=0;
+  bookArr:Array<any>=[]
 
   selectbookType(bktype):void{
     this.newbookType= bktype;
@@ -43,4 +43,8 @@ export class AppComponent {
       this.bookArr.splice(index, 1);
     }
 
+    //extra task 
+  deleteNbook():void{
+    this.bookArr.splice(0, this.deleteN);
+  }
 }

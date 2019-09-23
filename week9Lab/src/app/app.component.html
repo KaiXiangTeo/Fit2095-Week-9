@@ -308,6 +308,13 @@
     </textarea>
   </h3>
 
+  <h3>Delete N <br>
+    <input [(ngModel)]="deleteN" type="number" placeholder="Enter number of book to be delete"/>
+    <button (click)="deleteNbook()"> Delete N book </button>
+  </h3>
+</div>
+
+<div class="button">
   <button (click)="saveBook()"> Save Book {{bookArr.length}}</button>
   <button (click)="deleteHardCover()"> Delete Hard Cover  {{hardCoverNum()}}</button>
 </div>
